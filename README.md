@@ -1,5 +1,7 @@
 # nvim-base16
 
+> Try at your own risk haha!
+
 Neovim plugin for building base16 colorschemes with support for Neovim's
 builtin LSP and Treesitter.
 
