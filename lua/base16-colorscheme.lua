@@ -92,6 +92,7 @@ M.highlight = setmetatable({}, {
 function M.with_config(config)
     M.config = vim.tbl_extend("force", {
         float_border = false,
+        noice = true,
         telescope = true,
         telescope_borders = false,
         indentblankline = true,
@@ -455,6 +456,10 @@ function M.setup(colors, config)
         hi['@markup.list']              = '@punctuation.special'
     end
 
+    if M.config.noice then
+        hi.NoiceCmdlinePopupBorder = { guifg = M.colors.base00, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+    end
+
     if M.config.ts_rainbow then
         hi.rainbowcol1 = { guifg = M.colors.base06, ctermfg = M.colors.cterm06 }
         hi.rainbowcol2 = { guifg = M.colors.base09, ctermfg = M.colors.cterm09  }
@@ -472,7 +477,7 @@ function M.setup(colors, config)
     --     hi.FloatBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = darkerbg, ctermbg = darkerbg }
     -- else
         hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
-        hi.FloatBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+        hi.FloatBorder       = { guifg = M.colors.base00, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
     -- end
 
     hi.NormalNC          = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
