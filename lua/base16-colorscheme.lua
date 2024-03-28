@@ -147,7 +147,6 @@ function M.setup(colors, config)
 
     local hi               = M.highlight
     local darkerbg         = darken(M.colors.base00, 0.1)
-    local cdarkerbg         = darken(M.colors.cterm00, 0.1)
     local darkercursorline = darken(M.colors.base01, 0.1)
     local darkerstatusline = darken(M.colors.base02, 0.1)
 
