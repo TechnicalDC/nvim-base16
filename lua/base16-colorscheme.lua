@@ -460,7 +460,8 @@ function M.setup(colors, config)
     end
 
     if M.config.whichkey then
-        hi.WhichKeyFloat = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
+        hi.WhichKeyBorder = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
+        hi.WhichKeyFloat = { guifg = nil, guibg = darkerstatusline, gui = nil, guisp = nil }
     end
 
     if M.config.noice then
