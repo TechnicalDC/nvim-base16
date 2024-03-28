@@ -459,7 +459,16 @@ function M.setup(colors, config)
     end
 
     if M.config.noice then
+        hi.NoiceCmdlinePopupTitle = { guifg = darkercursorline, guibg = M.colors.base08, gui = nil, guisp = nil }
         hi.NoiceCmdlinePopupBorder = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
+        hi.NoiceCmdlinePopupBorderLua = "NoiceCmdlinePopupBorder"
+        hi.NoiceCmdlinePopupBorderSearch = "NoiceCmdlinePopupBorder"
+        hi.NoiceCmdlinePopupBorderCmdline = "NoiceCmdlinePopupBorder"
+        hi.NoiceCmdlinePopupBorderFilter = "NoiceCmdlinePopupBorder"
+        hi.NoiceCmdlinePopupBorderCalculator = "NoiceCmdlinePopupBorder"
+        hi.NoiceCmdlinePopupBorderHelp = "NoiceCmdlinePopupBorder"
+        hi.NoiceCmdlinePopupBorderInput = "NoiceCmdlinePopupBorder"
+        hi.NoiceCmdlinePopupBorderIncRename = "NoiceCmdlinePopupBorder"
     end
 
     if M.config.ts_rainbow then
@@ -474,14 +483,8 @@ function M.setup(colors, config)
 
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = 'none', guisp = nil, ctermfg = M.colors.cterm00, ctermbg = M.colors.cterm08 }
 
-    -- if not M.config.float_border then
-    --     hi.NormalFloat       = { guifg = M.colors.base05, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = darkerbg }
-    --     hi.FloatBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = darkerbg, ctermbg = darkerbg }
-    -- else
-        hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
-        hi.FloatBorder       = { guifg = M.colors.base00, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
-    -- end
-
+    hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+    hi.FloatBorder       = { guifg = M.colors.base00, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
     hi.NormalNC          = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
     hi.TermCursor        = { guifg = M.colors.base00, guibg = M.colors.base05, gui = 'none', guisp = nil, ctermfg = M.colors.cterm00, ctermbg = M.colors.cterm05 }
     hi.TermCursorNC      = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil, ctermfg = M.colors.cterm00, ctermbg = M.colors.cterm05 }
