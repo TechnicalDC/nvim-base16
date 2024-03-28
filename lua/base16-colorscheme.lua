@@ -462,6 +462,7 @@ function M.setup(colors, config)
 
     if M.config.bqf then
         hi.BqfPreviewFloat = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+        hi.BqfPreviewBorder = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
     end
 
     if M.config.bufferline then
