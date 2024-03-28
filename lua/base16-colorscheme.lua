@@ -91,7 +91,7 @@ M.highlight = setmetatable({}, {
 
 function M.with_config(config)
     M.config = vim.tbl_extend("force", {
-        float_border = false,
+        bufferline = true,
         noice = true,
         whichkey = true,
         telescope = true,
@@ -457,6 +457,10 @@ function M.setup(colors, config)
         hi['@markup.link.url']          = '@text.uri'
         hi['@markup.link.label']        = '@string.special'
         hi['@markup.list']              = '@punctuation.special'
+    end
+
+    if M.config.bufferline then
+        hi.BufferLineFill =  { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
     end
 
     if M.config.whichkey then
