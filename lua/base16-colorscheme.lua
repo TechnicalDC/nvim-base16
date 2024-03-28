@@ -140,9 +140,11 @@ function M.setup(colors, config)
         -- Only trust BASE16_THEME if not inside a tmux pane:
         base16_colorscheme = M.colorschemes[vim.env.BASE16_THEME]
     end
-    M.colors                              = colors or base16_colorscheme or
-        M.colorschemes['schemer-dark']
+
+    M.colors                              = colors or base16_colorscheme or M.colorschemes['schemer-dark']
+
     local hi                              = M.highlight
+    local darkerbg                        = darken(M.colors.base00, 0.1)
 
     -- Vim editor colors
     hi.Normal                             = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
@@ -495,7 +497,7 @@ function M.setup(colors, config)
     if M.config.telescope then
         if not M.config.telescope_borders and hex_re:match_str(M.colors.base00) and hex_re:match_str(M.colors.base01) and
             hex_re:match_str(M.colors.base02) then
-            local darkerbg           = darken(M.colors.base00, 0.1)
+            -- local darkerbg           = darken(M.colors.base00, 0.1)
             local darkercursorline   = darken(M.colors.base01, 0.1)
             local darkerstatusline   = darken(M.colors.base02, 0.1)
             hi.TelescopeBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
