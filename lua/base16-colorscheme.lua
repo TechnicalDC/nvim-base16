@@ -466,6 +466,8 @@ function M.setup(colors, config)
         hi.TroubleNormal = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
         hi.TroubleFoldIcon = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
         hi.TroubleCount = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+        hi.TroubleIndent = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+        hi.TroubleLocation = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
     end
 
     if M.config.dashboard then
