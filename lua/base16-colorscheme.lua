@@ -91,6 +91,7 @@ M.highlight = setmetatable({}, {
 
 function M.with_config(config)
     M.config = vim.tbl_extend("force", {
+        float_border = false,
         telescope = true,
         telescope_borders = false,
         indentblankline = true,
@@ -464,8 +465,16 @@ function M.setup(colors, config)
 
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = 'none', guisp = nil, ctermfg = M.colors.cterm00, ctermbg = M.colors.cterm08 }
 
-    hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
-    hi.FloatBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+    if not M.config.float_border and hex_re:match_str(M.colors.base00) and hex_re:match_str(M.colors.base01) and
+        hex_re:match_str(M.colors.base02) then
+        local darkerbg           = darken(M.colors.base00, 0.1)
+
+        hi.NormalFloat       = { guifg = M.colors.base05, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+        hi.FloatBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = darkerbg, ctermbg = darkerbg }
+    else
+        hi.FloatBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+    end
+
     hi.NormalNC          = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
     hi.TermCursor        = { guifg = M.colors.base00, guibg = M.colors.base05, gui = 'none', guisp = nil, ctermfg = M.colors.cterm00, ctermbg = M.colors.cterm05 }
     hi.TermCursorNC      = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil, ctermfg = M.colors.cterm00, ctermbg = M.colors.cterm05 }
