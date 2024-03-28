@@ -577,8 +577,8 @@ function M.setup(colors, config)
     end
 
     if M.config.cmp then
-        hi.CmpDocumentationBorder   = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
-        hi.CmpDocumentation         = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+        hi.CmpDocumentationBorder   = { guifg = M.colors.base05, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
+        hi.CmpDocumentation         = { guifg = M.colors.base05, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
         hi.CmpItemAbbr              = { guifg = M.colors.base05, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm01 }
         hi.CmpItemAbbrDeprecated    = { guifg = M.colors.base03, guibg = darkerbg, gui = 'strikethrough', guisp = nil, ctermfg = M.colors.cterm03, ctermbg = nil }
         hi.CmpItemAbbrMatch         = { guifg = M.colors.base0D, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = nil }
