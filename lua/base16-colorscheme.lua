@@ -93,6 +93,7 @@ function M.with_config(config)
     M.config = vim.tbl_extend("force", {
         float_border = false,
         noice = true,
+        whichkey = true,
         telescope = true,
         telescope_borders = false,
         indentblankline = true,
@@ -456,6 +457,10 @@ function M.setup(colors, config)
         hi['@markup.link.url']          = '@text.uri'
         hi['@markup.link.label']        = '@string.special'
         hi['@markup.list']              = '@punctuation.special'
+    end
+
+    if M.config.whichkey then
+        hi.WhichKeyFloat = { guifg = darkerstatusline, guibg = darkerstatusline, gui = nil, guisp = nil }
     end
 
     if M.config.noice then
