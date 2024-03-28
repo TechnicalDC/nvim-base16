@@ -96,6 +96,7 @@ function M.with_config(config)
         bufferline = true,
         noice = true,
         whichkey = true,
+        trouble = true,
         telescope = true,
         telescope_borders = false,
         indentblankline = true,
@@ -459,6 +460,10 @@ function M.setup(colors, config)
         hi['@markup.link.url']          = '@text.uri'
         hi['@markup.link.label']        = '@string.special'
         hi['@markup.list']              = '@punctuation.special'
+    end
+
+    if M.config.trouble then
+        hi.TroubleNormal = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
     end
 
     if M.config.dashboard then
