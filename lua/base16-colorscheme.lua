@@ -467,10 +467,10 @@ function M.setup(colors, config)
 
     -- if not M.config.float_border and hex_re:match_str(M.colors.base00) and hex_re:match_str(M.colors.base01) and
     --     hex_re:match_str(M.colors.base02) then
-    --     local darkerbg           = darken(M.colors.base00, 0.1)
-    --
-    --     hi.NormalFloat       = { guifg = M.colors.base05, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = darkerbg }
-    --     hi.FloatBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = darkerbg, ctermbg = darkerbg }
+        local darkerbg           = darken(M.colors.base00, 0.1)
+
+        hi.NormalFloat       = { guifg = M.colors.base05, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = darkerbg }
+        hi.FloatBorder       = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil, ctermfg = darkerbg, ctermbg = darkerbg }
     -- else
     --     hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
     --     hi.FloatBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
