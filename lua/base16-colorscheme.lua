@@ -468,6 +468,7 @@ function M.setup(colors, config)
         hi.TroubleCount = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
         hi.TroubleIndent = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
         hi.TroubleLocation = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+        hi.TroubleTextHint = 'DiagnosticHint'
     end
 
     if M.config.dashboard then
