@@ -470,12 +470,12 @@ function M.setup(colors, config)
         hi.TroubleLocation        = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
         hi.TroubleTextHint        = 'DiagnosticHint'
         hi.TroubleTextError       = 'DiagnosticError'
-        hi.TroubleTextWarning     = 'DiagnosticWarning'
-        hi.TroubleTextInformation = 'DiagnosticInformation'
+        hi.TroubleTextWarning     = 'DiagnosticWarn'
+        hi.TroubleTextInformation = 'DiagnosticInfo'
         hi.TroubleSignHint        = 'DiagnosticHint'
         hi.TroubleSignError       = 'DiagnosticError'
-        hi.TroubleSignWarning     = 'DiagnosticWarning'
-        hi.TroubleSignInformation = 'DiagnosticInformation'
+        hi.TroubleSignWarning     = 'DiagnosticWarn'
+        hi.TroubleSignInformation = 'DiagnosticInfo'
     end
 
     if M.config.dashboard then
