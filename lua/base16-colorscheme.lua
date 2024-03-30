@@ -464,10 +464,10 @@ function M.setup(colors, config)
 
     if M.config.trouble then
         hi.TroubleNormal          = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
-        hi.TroubleFoldIcon        = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
-        hi.TroubleCount           = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
-        hi.TroubleIndent          = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
-        hi.TroubleLocation        = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+        hi.TroubleFoldIcon        = { guifg = nil, guibg = nil, gui = nil, guisp = nil }
+        hi.TroubleCount           = { guifg = nil, guibg = nil, gui = nil, guisp = nil }
+        hi.TroubleIndent          = { guifg = nil, guibg = nil, gui = nil, guisp = nil }
+        hi.TroubleLocation        = { guifg = nil, guibg = nil, gui = nil, guisp = nil }
         hi.TroubleTextHint        = 'DiagnosticHint'
         hi.TroubleTextError       = 'DiagnosticError'
         hi.TroubleTextWarning     = 'DiagnosticWarn'
