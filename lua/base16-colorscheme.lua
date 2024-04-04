@@ -152,8 +152,11 @@ function M.setup(colors, config)
     local darkerbg         = darken(M.colors.base00, 0.1)
     local darkercursorline = darken(M.colors.base01, 0.1)
     local darkerstatusline = darken(M.colors.base02, 0.1)
+    local darkeradd        = darken(M.colors.base0B, 0.1)
+    local darkerchange     = darken(M.colors.base03, 0.1)
+    local darkerdelete     = darken(M.colors.base08, 0.1)
+    local darkertext       = darken(M.colors.base0D, 0.1)
 
-    -- Vim editor colors
     hi.Normal                             = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
     hi.Bold                               = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil, ctermfg = nil, ctermbg = nil }
     hi.Debug                              = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = nil }
@@ -231,15 +234,25 @@ function M.setup(colors, config)
     hi.Typedef                            = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm0A, ctermbg = nil }
 
     -- Diff highlighting
-    hi.DiffAdd                            = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
-    hi.DiffChange                         = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm03, ctermbg = M.colors.cterm00 }
-    hi.DiffDelete                         = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
-    hi.DiffText                           = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = M.colors.cterm00 }
-    hi.DiffAdded                          = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
-    hi.DiffFile                           = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
-    hi.DiffNewFile                        = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
-    hi.DiffLine                           = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = M.colors.cterm00 }
-    hi.DiffRemoved                        = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
+    hi.DiffAdd                            = { guifg = darkeradd, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
+    hi.DiffChange                         = { guifg = darkerchange, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm03, ctermbg = M.colors.cterm00 }
+    hi.DiffDelete                         = { guifg = darkerdelete, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
+    hi.DiffText                           = { guifg = darkertext, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = M.colors.cterm00 }
+    hi.DiffAdded                          = { guifg = darkeradd, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
+    hi.DiffFile                           = { guifg = darkerdelete, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
+    hi.DiffNewFile                        = { guifg = darkeradd, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
+    hi.DiffLine                           = { guifg = darkertext, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = M.colors.cterm00 }
+    hi.DiffRemoved                        = { guifg = darkerdelete, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
+
+    -- hi.DiffAdd                            = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
+    -- hi.DiffChange                         = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm03, ctermbg = M.colors.cterm00 }
+    -- hi.DiffDelete                         = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
+    -- hi.DiffText                           = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = M.colors.cterm00 }
+    -- hi.DiffAdded                          = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
+    -- hi.DiffFile                           = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
+    -- hi.DiffNewFile                        = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0B, ctermbg = M.colors.cterm00 }
+    -- hi.DiffLine                           = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm0D, ctermbg = M.colors.cterm00 }
+    -- hi.DiffRemoved                        = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = M.colors.cterm00 }
 
     -- Git highlighting
     hi.gitcommitOverflow                  = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil, ctermfg = M.colors.cterm08, ctermbg = nil }
