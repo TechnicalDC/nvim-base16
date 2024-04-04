@@ -152,10 +152,10 @@ function M.setup(colors, config)
     local darkerbg         = darken(M.colors.base00, 0.1)
     local darkercursorline = darken(M.colors.base01, 0.1)
     local darkerstatusline = darken(M.colors.base02, 0.1)
-    local darkeradd        = darken(M.colors.base0B, 0.6)
-    local darkerchange     = darken(M.colors.base03, 0.6)
-    local darkerdelete     = darken(M.colors.base08, 0.6)
-    local darkertext       = darken(M.colors.base0D, 0.6)
+    local darkeradd        = darken(M.colors.base0B, 0.3)
+    local darkerchange     = darken(M.colors.base03, 0.3)
+    local darkerdelete     = darken(M.colors.base08, 0.3)
+    local darkertext       = darken(M.colors.base0D, 0.3)
 
     hi.Normal                             = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil, ctermfg = M.colors.cterm05, ctermbg = M.colors.cterm00 }
     hi.Bold                               = { guifg = nil, guibg = nil, gui = 'bold', guisp = nil, ctermfg = nil, ctermbg = nil }
