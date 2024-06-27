@@ -501,7 +501,7 @@ function M.setup(colors, config)
     end
 
     if M.config.yazi then
-        hi.yazi = "NormalFloat"
+        hi.YaziFloat = "NormalFloat"
     end
 
     if M.config.noice then
