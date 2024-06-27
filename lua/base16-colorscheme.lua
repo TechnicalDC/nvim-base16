@@ -107,6 +107,7 @@ function M.with_config(config)
         lsp_semantic = true,
         mini_completion = true,
         dapui = true,
+        yazi = true,
     }, config or M.config or {})
 end
 
@@ -497,6 +498,10 @@ function M.setup(colors, config)
     if M.config.whichkey then
         hi.WhichKeyBorder = { guifg = darkerbg, guibg = darkerbg, gui = nil, guisp = nil }
         hi.WhichKeyFloat = { guifg = nil, guibg = darkerbg, gui = nil, guisp = nil }
+    end
+
+    if M.config.yazi then
+        hi.yazi = "NormalFloat"
     end
 
     if M.config.noice then
